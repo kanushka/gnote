@@ -3,7 +3,12 @@
 
     M.AutoInit();
     $('input#input_text, textarea#textarea2').characterCounter();
+    $('.tooltipped').tooltip();
+    $('select').formSelect(); 
     setLoadingScreen();
+
+    // scroll to top
+    $('html, body').animate({scrollTop:0},500);
 
     // load serviceWorker
     if ('serviceWorker' in navigator) {

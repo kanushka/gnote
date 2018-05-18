@@ -48,21 +48,6 @@
     $('#btnAddNote').click(event => {
         app.clearNoteModal();
         $('#editNoteModal').modal('open');
-        return;
-
-        let noteId = app.lastNote++;
-        let noteData = {
-            noteId: noteId,
-            title: 'test note title',
-            body: 'test note body',
-            createdTime: 'test note body',
-            modifiedTime: formatDate(new Date())
-        }
-
-        app.noteList[noteId] = noteData;
-        app.addNoteUI(noteData);
-
-        app.saveNotes();
     });
 
     $('#btnNoteSave').click(event => {
@@ -75,6 +60,7 @@
             app.updateNote(noteId);
         }
     });
+
 
     /**
      * 

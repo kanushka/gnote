@@ -1,11 +1,8 @@
 /* Custom Stylesheet */
 
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+ html {
+  background-color: #f4f4f4;
+}
 
 .icon-block {
   padding: 0 15px;
@@ -120,4 +117,11 @@
 
 input#noteTitle {
   font-size: 20px;
+}
+
+pre.card-content-text {
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-weight: normal;
+  color: rgba(0,0,0,0.87);
 }
