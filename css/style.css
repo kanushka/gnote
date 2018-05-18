@@ -117,3 +117,7 @@
   border-radius: 2px;
   will-change: top, opacity;
 }
+
+input#noteTitle {
+  font-size: 20px;
+}

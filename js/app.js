@@ -67,12 +67,12 @@
 
     $('#btnNoteSave').click(event => {
         let noteId = $('#noteId').val();
-        if(noteId == '' || noteId == null){
+        if (noteId == '' || noteId == null) {
             // new note
             app.addNote();
-        }else{
+        } else {
             // update note     
-            app.updateNote(noteId);       
+            app.updateNote(noteId);
         }
     });
 
@@ -100,17 +100,16 @@
         }
 
         console.log('initial notes are loaded');
-    }   
+    }
 
-    app.addNote = function(){
+    app.addNote = function () {
         let noteId = ++(app.lastNote);
         let noteData = {
             noteId: noteId,
             title: $('#noteTitle').val(),
             body: $('#noteBody').val(),
             createdTime: formatDate(new Date()),
-            modifiedTime: formatDate(new Date()),
-            isActive = 1 // 0 - deleted, 1 - active
+            modifiedTime: formatDate(new Date())
         }
 
         app.noteList[noteId] = noteData;
@@ -119,19 +118,19 @@
         app.saveNotes();
     }
 
-    app.updateNote = function(noteId){
+    app.updateNote = function (noteId) {
         let title = $('#noteTitle').val();
         let body = $('#noteBody').val();
         let modifiedTime = formatDate(new Date());
 
         // remove note UI
         $(`#note_${noteId}`).remove();
-        
+
         // add new note
         let noteData = {
             noteId: noteId,
             title: title,
-            body: body,            
+            body: body,
             modifiedTime: modifiedTime
         }
         app.addNoteUI(noteData);
@@ -143,6 +142,9 @@
 
         // update in local storage
         app.saveNotes();
+        M.toast({
+            html: 'Note updated.'
+        })
     }
 
     app.clearNoteModal = function () {
@@ -167,7 +169,7 @@
         note.removeAttr('hidden');
         app.container.prepend(note);
     }
-    
+
     /**
      * 
      *   Methods for dealing with the model
