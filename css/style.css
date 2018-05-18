@@ -1,0 +1,119 @@
+/* Custom Stylesheet */
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.sidenav-overlay {
+  z-index: 901;
+}
+
+.fixed-action-btn {
+  z-index: 900;
+}
+
+.navbar-logo {
+  max-width: 80px;
+  height: auto;
+  margin-top: 4px;
+}
+
+.navbar-title {
+  display: none;
+}
+
+.sidebar-background {
+  background-color: green;
+}
+
+.sidebar-logo {
+  max-width: 80px;
+  height: auto;
+}
+
+.first-col-group {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-logo {
+    display: none;
+  }
+  .navbar-title {
+    display: block;
+    max-width: 70px;
+    height: auto;
+    margin-top: 8px;
+  }
+  nav .brand-logo {
+    left: 25%;
+  }
+}
+
+.full-preloader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #66BB6A;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader-image {
+  width: 80px;
+  height: auto;
+}
+
+.color-background {
+  background-color: #66BB6A;
+  position: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.card-footer {
+  margin-top: 10px;
+  font-size: 11px;
+  background-color: #f7f6f6;
+  padding: 5px;
+  width: max-content;
+}
+
+.modal.modal-fixed-footer {
+  padding: 0;
+  height: 80%;
+}
+
+@media only screen and (max-width: 992px) {
+  .modal {
+    width: 90%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 90%;
+  width: 90%;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity;
+}

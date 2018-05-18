@@ -1,0 +1,18 @@
+{
+  "name": "gnote",
+  "short_name": "gnote",
+  "theme_color": "#66bb6a",
+  "background_color": "#66bb6a",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/index.html",
+  "icons": [ {
+    "src": "img/icons/apple-icon-152x152.png",
+    "sizes": "152x152",
+    "type": "image/png"
+  }, {
+    "src": "img/icons/note-icon-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

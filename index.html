@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- title -->
+    <title>gnote</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <!-- <link rel="manifest" href="img/icons/manifest.json"> -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+
+    <!-- preloader -->
+    <div id="logoPreloader" class="full-preloader">
+        <img src="img/note-10.png" class="preloader-image" />
+    </div>
+
+    <!-- nav bar -->
+    <div class="navbar-fixed">
+        <nav class="green lighten-1" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#" class="brand-logo">
+                    <img class="navbar-logo" src="img/note-10.png" alt="gnote logo">
+                    <img class="navbar-title" src="img/note-10.png" alt="gnote logo">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#">Gayan</a>
+                    </li>
+                </ul>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <div class="color-background"></div>
+                            </div>
+                            <a>
+                                <img class="sidebar-logo" src="img/note-10.png">
+                            </a>
+                            <a href="#name">
+                                <span class="white-text name">Kanushka Gayan</span>
+                            </a>
+                            <a href="#email">
+                                <span class="white-text email">kanushkanet@gmail.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">note</i>Notes</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">restore</i>Reminders</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">archive</i>Archive</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">delete</i>Trash</a>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">settings</i>Settings</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">help</i>Help & feedback </a>
+                    </li>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- floting action buttons -->
+    <div class="fixed-action-btn">
+        <a id="mainActionBtn" class="btn-floating btn-large scale-transition scale-out red">
+            <i class="large material-icons">add</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating blue">
+                    <i class="material-icons">attach_file</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating green">
+                    <i class="material-icons">add_alarm</i>
+                </a>
+            </li>
+            <li>
+                <a id="btnAddNote" class="btn-floating yellow darken-3">
+                    <i class="material-icons">note_add</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- note cards -->
+    <div class="container">
+        <div class="row">
+
+            <!-- column group one -->
+            <div class="first-col-group">
+                
+                <!-- note template -->
+                <div class="col s12 m6 l4 noteTemplate" hidden>
+                    <div class="card animated fadeIn">                        
+                        <!-- note content -->
+                        <div class="card-content ">
+                            <span class="card-title grey-text text-darken-4">
+                                <span class="card-title-text">Card Title</span>
+                                <i class="material-icons right show-note-modal">more_vert
+                                    <!-- hidden variables -->
+                        <input type="hidden" class="note-id">
+                                </i>
+                            </span>
+                            <pre class="card-content-text">I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</pre>
+                            <div class="card-footer">
+                                <span class="card-modified-time">Today 8.00 pm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- column group two -->
+            <div class="col s12 m6 l4 second-col-group">
+            </div>
+
+            <!-- column group three -->
+            <div class="col s12 m6 l4 third-col-group">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal Structures -->
+    <div id="editNoteModal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <form class="col s12">
+                <input type="hidden" id="noteId">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="noteTitle" type="text" class="validate" maxlength="50">
+                        <label for="noteTitle">Title</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="noteBody" class="materialize-textarea" data-length="200" maxlength="200"></textarea>
+                        <label for="noteBody">Note</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a id="btnNoteDelete" class="modal-close btn-flat">
+                <i class="material-icons" style="font-size: 1.8rem;">delete</i>
+            </a>
+            <a id="btnNoteSave" class="modal-close btn-flat">
+                <i class="material-icons" style="font-size: 1.8rem;">save</i>
+            </a>
+        </div>
+    </div>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
