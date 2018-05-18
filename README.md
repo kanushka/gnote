@@ -9,7 +9,7 @@ This is simple **note** application for mobile and this build as a **progressive
 _Source:_  [Google Developers - Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
 
 
-Because of that, this APP no need to install. just use URL https://gnote.000webhostapp.com/ from you mobile device.
+Because of that, this APP no need to install. just use URL https://gnotes.000webhostapp.com/ from you mobile device.
 The browser will automatically suggest  **add to Home Screen** .
 So, you can just run in your device. 
 
