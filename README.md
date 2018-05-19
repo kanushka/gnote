@@ -16,6 +16,6 @@ So, you can just run in your device.
 
 
 ## 
-**still this project in development.*
+**still under development*
 
 
