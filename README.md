@@ -10,8 +10,8 @@ _Source:_  [Google Developers - Progressive Web Apps](https://developers.google.
 
 
 Because of that, this APP no need to install. just use URL https://gnotes.000webhostapp.com/ from you mobile device.
-The browser will automatically suggest  **add to Home Screen** .
-So, you can just run in your device. 
+The browser will automatically suggest  **add to Home Screen**.
+So, you can just run in your device as a Native App. 
 
 
 
