@@ -1,4 +1,4 @@
-﻿# ![enter image description here](https://gnote.000webhostapp.com/img/icons/android-icon-96x96.png)gnote
+﻿# ![enter image description here](https://gnotes.000webhostapp.com/img/icons/android-icon-96x96.png)gnote
 
 gnote is currently in development. It is a simple **note** application build as a **progressive web application**. So I encourage you to use it and give me your feedback.
 
