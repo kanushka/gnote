@@ -4,11 +4,13 @@
     M.AutoInit();
     $('input#input_text, textarea#textarea2').characterCounter();
     $('.tooltipped').tooltip();
-    $('select').formSelect(); 
+    $('select').formSelect();
     setLoadingScreen();
 
     // scroll to top
-    $('html, body').animate({scrollTop:0},500);
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
 
     // load serviceWorker
     if ('serviceWorker' in navigator) {
@@ -39,8 +41,34 @@
       $('#mainActionBtn').removeClass('scale-out');
       $('#mainActionBtn').addClass('scale-in');
     }
-
-
   }
 
 })(jQuery); // end of jQuery name space
+
+
+let deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+});
+
+async function install() {
+  console.log('install btn clicked');
+
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    console.log(deferredPrompt)
+    deferredPrompt.userChoice.then(function (choiceResult) {
+
+      if (choiceResult.outcome === 'accepted') {
+        console.log('Your PWA has been installed');
+      } else {
+        console.log('User chose to not install your PWA');
+      }
+      deferredPrompt = null;
+    });
+  }
+}

@@ -1,4 +1,3 @@
-var dataCacheName = 'gnote-app-data-v1';
 var cacheName = 'gnote-app-v1';
 
 var filesToCache = [
@@ -9,9 +8,10 @@ var filesToCache = [
   '/css/materialize.min.css',
   '/css/style.css',
 
-  '/js/init.js',
-  '/js/app.js',
+  '/js/jquery-3.3.1.min.js',
   '/js/materialize.min.js',
+  '/js/app.js',
+  '/js/init.js',
 
   '/img/note-10.png',
   '/img/office.jpg',
