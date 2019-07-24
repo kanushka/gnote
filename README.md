@@ -9,9 +9,11 @@ gnote is currently in development. It is a simple **note** application build as 
 _Source:_  [Google Developers - Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
 
 
-Because of that, this APP no need to install. just use URL https://gnotes.000webhostapp.com/ from you mobile device.
+Because of that, this APP no need to install. just use URL https://kanushka.com/gnote/ from you mobile device.
 The browser will automatically suggest  **add to Home Screen**.
 So, you can just run in your device as a Native App. 
+
+Now you can download this App to your laptop using chrome browser.
 
 
 
